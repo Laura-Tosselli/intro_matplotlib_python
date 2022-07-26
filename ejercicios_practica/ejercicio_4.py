@@ -43,9 +43,31 @@ if __name__ == '__main__':
     #  graf3 | graf4
     # Utilizar add_subplot para lograr este efecto
     # de "2 filas" "2 columna" de gráficos
+    fig1=plt.figure()
+    fig1.suptitle('Figura con múltiples gráficos', fontsize=14)
+    ax1 = fig1.add_subplot(2, 2, 1)  # 2 filas, 2 columnas, axes nº1
+    ax2 = fig1.add_subplot(2, 2, 2)  # 2 filas, 2 columnas, axes nº2
+    ax3 = fig1.add_subplot(2, 2, 3)  # 2 filas, 2 columnas, axes nº3
+    ax4 = fig1.add_subplot(2, 2, 4)  # 2 filas, 2 columnas, axes nº4
+
 
     # Se debe colocar en la leyenda la función que representa
     # cada gráfico
+    ax1.plot(x, y1, c='darkgreen', label='y1 = x**2')
+    ax1.legend()
+    ax1.grid()
+
+    ax2.plot(x, y2, c='darkblue', label='y2 = x**3')
+    ax2.legend()
+    ax2.grid()
+
+    ax3.plot(x, y3, c='darkred', label='y3 = x**4')
+    ax3.legend()
+    ax3.grid()
+
+    ax4.plot(x, y4, c='darkgrey', label='y4 = np.sqrt(x)')
+    ax4.legend()
+    ax4.grid()
 
     # Cada gráfico realizarlo con un color distinto
     # a su elección
@@ -53,5 +75,5 @@ if __name__ == '__main__':
     # Colocar una grilla a elección
 
     # Crear acá su gráfico
-
+    plt.show()
     print("terminamos")

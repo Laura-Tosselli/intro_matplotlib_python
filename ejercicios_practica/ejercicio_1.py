@@ -29,10 +29,17 @@ if __name__ == '__main__':
 
     # Alumno: Crear una "figura" y crear un "ax" con add_subplot
     # Graficar el "line plot" de "y" en función de "x"
+    fig1 = plt.figure()
+    fig1.suptitle('Datos', fontsize=14)
+    ax = fig1.add_subplot()
 
+    
     # Alumno: Colocar la leyenda y el label con el nombre de la función
     # Darle color a la línea a su elección
+    ax.plot(x, y, c='blue', label='datos')
+    ax.legend()
+    ax.grid()
 
     # Crear acá su gráfico
-
+    plt.show()
     print("terminamos")
